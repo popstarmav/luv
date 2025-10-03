@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashari, My Heart’s Rhyme</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Hidden YouTube player -->
+  <div id="youtube-player" style="display: none;"></div>
+
+  <section id="landing" class="section active">
+    <div class="gif-background">
+      <img src="https://media.giphy.com/media/l41lKKBX2cyvP7f2w/giphy.gif" alt="Heart Pulse GIF" class="gif" loading="lazy">
+    </div>
+    <h1>Ashari, My Heart’s Rhyme ❤️</h1>
+    <p>Our love’s a verse, spun raw in starlight’s glow.</p>
+    <button class="begin-btn" data-next="act1">Begin Our Rhyme</button>
+  </section>
+  <section id="act1" class="section">
+    <h2>Act 1: The Spark ✨</h2>
+    <p>When our souls first collided, a fire was born.</p>
+    <img src="https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif" alt="Sparkle GIF" class="gif" loading="lazy">
+    <button class="unlock-btn" data-unlock="spark-gift">Unveil Our Spark</button>
+    <div id="spark-gift" class="gift-reveal" style="display: none;">
+      <p>Yo, Ashari, my dawn, when I first kissed you, it’s real, <br> Sparks lit the night, gave my heart that raw feel.</p>
+      <a href="YOUR_COLLAGE_LINK" target="_blank">That First Kiss Still Burns</a>
+    </div>
+    <button class="next-btn" data-next="act2">Next Verse</button>
+  </section>
+  <section id="act2" class="section">
+    <h2>Act 2: The Struggle 💔</h2>
+    <p>Through the pain, we held strong, never broke.</p>
+    <img src="https://media.giphy.com/media/26BRv0ThflC13K392/giphy.gif" alt="Heart Heal GIF" class="gif" loading="lazy">
+    <button class="unlock-btn" data-unlock="struggle-gift">Unveil Our Strength</button>
+    <div id="struggle-gift" class="gift-reveal" style="display: none;">
+      <p>Ashari, my rock, when the storms tried to crush, <br> Shadows hit hard, but your light kept it plush.</p>
+      <a href="YOUR_NOTE_LINK" target="_blank">My Light Through the Dark</a>
+    </div>
+    <button class="next-btn" data-next="act3">Next Verse</button>
+  </section>
+  <section id="act3" class="section">
+    <h2>Act 3: The Grind 💪🏾</h2>
+    <p>Hustlin’ for us, buildin’ dreams from the ground.</p>
+    <img src="https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif" alt="Strength GIF" class="gif" loading="lazy">
+    <button class="unlock-btn" data-unlock="grind-gift">Unveil Our Growth</button>
+    <div id="grind-gift" class="gift-reveal" style="display: none;">
+      <p>Yo, Ashari, my muse, I’m grindin’ for our crown, <br> Stackin’ dreams tall, won’t let the streets pull me down.</p>
+      <p>Calm Gift Card: XXXX-XXXX-XXXX</p>
+      <button class="copy-btn" data-code="XXXX-XXXX-XXXX">Copy Code</button>
+    </div>
+    <button class="next-btn" data-next="act4">Next Verse</button>
+  </section>
+  <section id="act4" class="section">
+    <h2>Act 4: The Love 💕</h2>
+    <p>My queen, your love’s the rhythm of my soul.</p>
+    <img src="https://media.giphy.com/media/26AHvF2p5prida5tC/giphy.gif" alt="Romantic GIF" class="gif" loading="lazy">
+    <button class="unlock-btn" data-unlock="love-gift">Unveil My Love</button>
+    <div id="love-gift" class="gift-reveal" style="display: none;">
+      <p>Ashari, my queen, your love’s my heart’s rhyme, <br> Every beat’s for you, through the struggle, through time.</p>
+      <img src="YOUR_SPOTIFY_CODE_IMAGE" alt="Spotify Playlist Code" style="max-width: 120px;">
+      <a href="YOUR_SPOTIFY_PLAYLIST_LINK" target="_blank">My Soul Sings for You</a>
+    </div>
+    <button class="next-btn" data-next="act5">Next Verse</button>
+  </section>
+  <section id="act5" class="section">
+    <h2>Act 5: The Future 🚀</h2>
+    <p>Our love’s a legacy, risin’ to the stars.</p>
+    <img src="https://media.giphy.com/media/l0MYt5jPRbrfPMoX6/giphy.gif" alt="Future GIF" class="gif" loading="lazy">
+    <button class="unlock-btn" data-unlock="future-gift">Unveil Our Future</button>
+    <div id="future-gift" class="gift-reveal" style="display: none;">
+      <p>Ashari, my star, we gon’ shine past the skies, <br> Our love’s a legacy, where the real never dies.</p>
+      <p>Shein Gift Card: XXXX-XXXX-XXXX</p>
+      <button class="copy-btn" data-code="XXXX-XXXX-XXXX">Copy Code</button>
+      <img src="YOUR_VOUCHER_IMAGE" alt="Starry Picnic Voucher" style="max-width: 120px;">
+      <a href="YOUR_VOUCHER_LINK" target="_blank">Our Starry Night Awaits</a>
+    </div>
+    <button class="next-btn" data-next="playlist-section">Final Verse</button>
+  </section>
+  <section id="playlist-section" class="section">
+    <h2>Our Playlist ❤️</h2>
+    <p>Each note a chapter, our love’s timeless rhyme.</p>
+    <ul id="track-list">
+      <li data-track="0">The spark when I first kissed you.</li>
+      <li data-track="1">Our dreams took flight, hand in hand.</li>
+      <li data-track="2">Falling deeper, lost in your glow.</li>
+      <li data-track="3">My ride-or-die, through every storm.</li>
+      <li data-track="4">Our truth, unyielding and pure.</li>
+      <li data-track="5">Fighting for your heart’s sweet grace.</li>
+      <li data-track="6">Each moment apart, my soul aches.</li>
+      <li data-track="7">Sweet as our tenderest embrace.</li>
+      <li data-track="8">Through shadows, our love holds fast.</li>
+      <li data-track="9">My angel, my heart’s eternal muse.</li>
+      <li data-track="10">Forever yours, my vow unbroken.</li>
+      <li data-track="11">For you, I’d cross the stars above.</li>
+    </ul>
+    <button id="mute-btn" aria-label="Toggle audio playback">Mute</button>
+  </section>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</body>
+</html>
