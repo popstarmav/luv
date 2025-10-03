@@ -3,9 +3,161 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ashari, My Heart’s Rhyme</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <title>$ASHARI Memecoin Roadmap – Ignite the Future</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&Lato&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      font-family: 'Lato', sans-serif;
+      background: linear-gradient(135deg, #4b0082, #ff69b4);
+      color: #fff;
+      touch-action: none; /* Prevent default browser scrolling */
+    }
+
+    #youtube-player {
+      display: none;
+    }
+
+    .section {
+      position: fixed;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transition: top 0.6s ease-in-out;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+
+    .section.active {
+      top: 0;
+    }
+
+    h1, h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5rem;
+      margin: 0.5rem 0;
+      text-shadow: 0 0 8px #ff69b4, 0 0 12px #ffd700;
+    }
+
+    p {
+      font-size: 1rem;
+      max-width: 90%;
+      line-height: 1.4;
+    }
+
+    .begin-btn, .next-btn, .unlock-btn, .copy-btn, #mute-btn {
+      padding: 0.8rem 1.8rem;
+      font-size: 1rem;
+      background: #ffd700;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      font-family: 'Lato', sans-serif;
+    }
+
+    .begin-btn:hover, .next-btn:hover, .unlock-btn:hover, .copy-btn:hover, #mute-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 10px #ff69b4;
+    }
+
+    .gif {
+      max-width: 150px;
+      margin: 0.5rem 0;
+      opacity: 0;
+      animation: fadeIn 0.5s ease-in forwards, pulse 1.8s infinite;
+    }
+
+    .gif-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.3;
+      z-index: -1;
+    }
+
+    .gif-background .gif {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      animation: none;
+    }
+
+    .gift-reveal {
+      margin: 1rem 0;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      animation: fadeIn 0.5s ease-in;
+    }
+
+    .gift-reveal a, .gift-reveal p {
+      color: #ff69b4;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .gift-reveal img {
+      max-width: 120px;
+      border-radius: 10px;
+    }
+
+    #track-list {
+      list-style: none;
+      padding: 0;
+      max-height: 30vh;
+      overflow-y: auto;
+      font-size: 0.9rem;
+      opacity: 0.9;
+      margin: 1rem 0;
+    }
+
+    #track-list li {
+      margin: 0.5rem 0;
+    }
+
+    #track-list li.active {
+      font-weight: bold;
+      color: #ff69b4;
+      text-shadow: 0 0 5px #ff69b4;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+      100% { transform: scale(1); }
+    }
+
+    @media (max-width: 600px) {
+      h1, h2 {
+        font-size: 2rem;
+      }
+      p, #track-list li, .gift-reveal p, .gift-reveal a {
+        font-size: 0.85rem;
+      }
+      .begin-btn, .next-btn, .unlock-btn, .copy-btn, #mute-btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+      }
+      .gif, .gift-reveal img {
+        max-width: 100px;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Hidden YouTube player -->
@@ -15,91 +167,204 @@
     <div class="gif-background">
       <img src="https://media.giphy.com/media/l41lKKBX2cyvP7f2w/giphy.gif" alt="Heart Pulse GIF" class="gif" loading="lazy">
     </div>
-    <h1>Ashari, My Heart’s Rhyme ❤️</h1>
-    <p>Our love’s a verse, spun raw in starlight’s glow.</p>
-    <button class="begin-btn" data-next="act1">Begin Our Rhyme</button>
+    <h1>$ASHARI Memecoin Roadmap – Ignite the Future</h1>
+    <p>From spark to stars, our token's rhyme unfolds.</p>
+    <p>Swipe up to launch the journey!</p>
   </section>
   <section id="act1" class="section">
-    <h2>Act 1: The Spark ✨</h2>
-    <p>When our souls first collided, a fire was born.</p>
+    <h2>Act 1: The Ignition ✨</h2>
+    <p>Where the dream ignites, from code to coin's birth.</p>
     <img src="https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif" alt="Sparkle GIF" class="gif" loading="lazy">
-    <button class="unlock-btn" data-unlock="spark-gift">Unveil Our Spark</button>
-    <div id="spark-gift" class="gift-reveal" style="display: none;">
-      <p>Yo, Ashari, my dawn, when I first kissed you, it’s real, <br> Sparks lit the night, gave my heart that raw feel.</p>
-      <a href="YOUR_COLLAGE_LINK" target="_blank">That First Kiss Still Burns</a>
+    <button class="unlock-btn" data-unlock="ignition-gift">Unveil the Ignition</button>
+    <div id="ignition-gift" class="gift-reveal" style="display: none;">
+      <p>Yo, $ASHARI, my dawn, when the code first dropped real, <br> Sparks lit the chain, gave the token that raw feel.</p>
+      <p>Tokenomics: 1B supply, 10% burn, 20% liquidity locked.</p>
+      <a href="YOUR_TOKENOMICS_LINK" target="_blank">Full Tokenomics Reveal</a>
     </div>
-    <button class="next-btn" data-next="act2">Next Verse</button>
+    <p>Swipe up for the next verse!</p>
   </section>
   <section id="act2" class="section">
-    <h2>Act 2: The Struggle 💔</h2>
-    <p>Through the pain, we held strong, never broke.</p>
+    <h2>Act 2: The Trials 💔</h2>
+    <p>Through dips and doubts, the grind tests the soul.</p>
     <img src="https://media.giphy.com/media/26BRv0ThflC13K392/giphy.gif" alt="Heart Heal GIF" class="gif" loading="lazy">
-    <button class="unlock-btn" data-unlock="struggle-gift">Unveil Our Strength</button>
-    <div id="struggle-gift" class="gift-reveal" style="display: none;">
-      <p>Ashari, my rock, when the storms tried to crush, <br> Shadows hit hard, but your light kept it plush.</p>
-      <a href="YOUR_NOTE_LINK" target="_blank">My Light Through the Dark</a>
+    <button class="unlock-btn" data-unlock="trials-gift">Unveil the Trials</button>
+    <div id="trials-gift" class="gift-reveal" style="display: none;">
+      <p>$ASHARI, my rock, when the dumps tried to crush, <br> FUD hit hard, but the community kept it plush.</p>
+      <p>Marketing: X campaigns, Telegram airdrops to early holders.</p>
+      <a href="YOUR_MARKETING_LINK" target="_blank">Marketing Blueprint</a>
     </div>
-    <button class="next-btn" data-next="act3">Next Verse</button>
+    <p>Swipe up for the next verse!</p>
   </section>
   <section id="act3" class="section">
     <h2>Act 3: The Grind 💪🏾</h2>
-    <p>Hustlin’ for us, buildin’ dreams from the ground.</p>
+    <p>Hustlin' for moon, buildin' from the ground up.</p>
     <img src="https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif" alt="Strength GIF" class="gif" loading="lazy">
-    <button class="unlock-btn" data-unlock="grind-gift">Unveil Our Growth</button>
+    <button class="unlock-btn" data-unlock="grind-gift">Unveil the Grind</button>
     <div id="grind-gift" class="gift-reveal" style="display: none;">
-      <p>Yo, Ashari, my muse, I’m grindin’ for our crown, <br> Stackin’ dreams tall, won’t let the streets pull me down.</p>
-      <p>Calm Gift Card: XXXX-XXXX-XXXX</p>
-      <button class="copy-btn" data-code="XXXX-XXXX-XXXX">Copy Code</button>
+      <p>Yo, $ASHARI, my muse, I’m grindin’ for our crown, <br> Stackin’ holders tall, won’t let the bears pull us down.</p>
+      <p>Community: Discord launches, NFT drops for OGs.</p>
+      <a href="YOUR_COMMUNITY_LINK" target="_blank">Community Roadmap</a>
     </div>
-    <button class="next-btn" data-next="act4">Next Verse</button>
+    <p>Swipe up for the next verse!</p>
   </section>
   <section id="act4" class="section">
-    <h2>Act 4: The Love 💕</h2>
-    <p>My queen, your love’s the rhythm of my soul.</p>
+    <h2>Act 4: The Moonshot 💕</h2>
+    <p>Our token's rhythm, risin' to the peak.</p>
     <img src="https://media.giphy.com/media/26AHvF2p5prida5tC/giphy.gif" alt="Romantic GIF" class="gif" loading="lazy">
-    <button class="unlock-btn" data-unlock="love-gift">Unveil My Love</button>
-    <div id="love-gift" class="gift-reveal" style="display: none;">
-      <p>Ashari, my queen, your love’s my heart’s rhyme, <br> Every beat’s for you, through the struggle, through time.</p>
-      <img src="YOUR_SPOTIFY_CODE_IMAGE" alt="Spotify Playlist Code" style="max-width: 120px;">
-      <a href="YOUR_SPOTIFY_PLAYLIST_LINK" target="_blank">My Soul Sings for You</a>
+    <button class="unlock-btn" data-unlock="moonshot-gift">Unveil the Moonshot</button>
+    <div id="moonshot-gift" class="gift-reveal" style="display: none;">
+      <p>$ASHARI, my queen, your vibe’s my heart’s rhyme, <br> Every pump’s for the fam, through the struggle, through time.</p>
+      <p>Partnerships: Influencer collabs, DEX listings.</p>
+      <a href="YOUR_PARTNERSHIPS_LINK" target="_blank">Moonshot Strategy</a>
     </div>
-    <button class="next-btn" data-next="act5">Next Verse</button>
+    <p>Swipe up for the next verse!</p>
   </section>
   <section id="act5" class="section">
-    <h2>Act 5: The Future 🚀</h2>
-    <p>Our love’s a legacy, risin’ to the stars.</p>
+    <h2>Act 5: The Legacy 🚀</h2>
+    <p>Our coin’s a legacy, eternal in the stars.</p>
     <img src="https://media.giphy.com/media/l0MYt5jPRbrfPMoX6/giphy.gif" alt="Future GIF" class="gif" loading="lazy">
-    <button class="unlock-btn" data-unlock="future-gift">Unveil Our Future</button>
-    <div id="future-gift" class="gift-reveal" style="display: none;">
-      <p>Ashari, my star, we gon’ shine past the skies, <br> Our love’s a legacy, where the real never dies.</p>
-      <p>Shein Gift Card: XXXX-XXXX-XXXX</p>
+    <button class="unlock-btn" data-unlock="legacy-gift">Unveil the Legacy</button>
+    <div id="legacy-gift" class="gift-reveal" style="display: none;">
+      <p>$ASHARI, my star, we gon’ shine past the skies, <br> Our legacy strong, where the real never dies.</p>
+      <p>Shein Gift Card: XXXX-XXXX-XXXX (For our queen holders!)</p>
       <button class="copy-btn" data-code="XXXX-XXXX-XXXX">Copy Code</button>
-      <img src="YOUR_VOUCHER_IMAGE" alt="Starry Picnic Voucher" style="max-width: 120px;">
-      <a href="YOUR_VOUCHER_LINK" target="_blank">Our Starry Night Awaits</a>
+      <img src="YOUR_VOUCHER_IMAGE" alt="Legacy Airdrop Voucher" style="max-width: 120px;">
+      <a href="YOUR_AIRDROP_LINK" target="_blank">Claim Legacy Airdrop</a>
     </div>
-    <button class="next-btn" data-next="playlist-section">Final Verse</button>
+    <p>Swipe up for the final verse!</p>
   </section>
   <section id="playlist-section" class="section">
-    <h2>Our Playlist ❤️</h2>
-    <p>Each note a chapter, our love’s timeless rhyme.</p>
+    <h2>Our Soundtrack ❤️</h2>
+    <p>Each beat a milestone, our coin’s timeless flow.</p>
     <ul id="track-list">
-      <li data-track="0">The spark when I first kissed you.</li>
+      <li data-track="0">The spark when the code first dropped.</li>
       <li data-track="1">Our dreams took flight, hand in hand.</li>
-      <li data-track="2">Falling deeper, lost in your glow.</li>
-      <li data-track="3">My ride-or-die, through every storm.</li>
+      <li data-track="2">Falling deeper, lost in the pump.</li>
+      <li data-track="3">My ride-or-die, through every dip.</li>
       <li data-track="4">Our truth, unyielding and pure.</li>
-      <li data-track="5">Fighting for your heart’s sweet grace.</li>
-      <li data-track="6">Each moment apart, my soul aches.</li>
-      <li data-track="7">Sweet as our tenderest embrace.</li>
-      <li data-track="8">Through shadows, our love holds fast.</li>
-      <li data-track="9">My angel, my heart’s eternal muse.</li>
-      <li data-track="10">Forever yours, my vow unbroken.</li>
+      <li data-track="5">Fighting for the moon’s sweet grace.</li>
+      <li data-track="6">Each moment apart, the chart aches.</li>
+      <li data-track="7">Sweet as our tenderest pump.</li>
+      <li data-track="8">Through shadows, our coin holds fast.</li>
+      <li data-track="9">My angel, the chart’s eternal muse.</li>
+      <li data-track="10">Forever holders, my vow unbroken.</li>
       <li data-track="11">For you, I’d cross the stars above.</li>
     </ul>
     <button id="mute-btn" aria-label="Toggle audio playback">Mute</button>
   </section>
   <script src="https://www.youtube.com/iframe_api"></script>
-  <script src="js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    let player;
+    let currentTrack = 0;
+    let touchStartY = 0;
+
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('youtube-player', {
+        height: '0',
+        width: '0',
+        playerVars: {
+          listType: 'playlist',
+          list: 'YOUR_PLAYLIST_ID', // Replace with your YouTube playlist ID
+          autoplay: 0,
+          controls: 0,
+          loop: 1,
+          playsinline: 1
+        },
+        events: {
+          onReady: onPlayerReady,
+          onStateChange: onPlayerStateChange
+        }
+      });
+    }
+
+    function onPlayerReady(event) {
+      player.setVolume(20);
+    }
+
+    function onPlayerStateChange(event) {
+      if (event.data === YT.PlayerState.ENDED) {
+        currentTrack = (currentTrack + 1) % 12;
+        updateTrackUI();
+      }
+    }
+
+    function updateTrackUI() {
+      const trackListItems = document.querySelectorAll('#track-list li');
+      trackListItems.forEach((item, index) => {
+        item.classList.toggle('active', index === currentTrack);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = ['landing', 'act1', 'act2', 'act3', 'act4', 'act5', 'playlist-section'];
+      const unlockButtons = document.querySelectorAll('.unlock-btn');
+      const copyButtons = document.querySelectorAll('.copy-btn');
+      const muteBtn = document.getElementById('mute-btn');
+      let isSwiping = false;
+
+      // Toggle mute
+      muteBtn.addEventListener('click', () => {
+        if (player.isMuted()) {
+          player.unMute();
+          muteBtn.textContent = 'Mute';
+        } else {
+          player.mute();
+          muteBtn.textContent = 'Unmute';
+        }
+      });
+
+      // Touch swipe navigation
+      document.addEventListener('touchstart', (e) => {
+        touchStartY = e.touches[0].clientY;
+        isSwiping = true;
+      });
+
+      document.addEventListener('touchend', (e) => {
+        if (!isSwiping) return;
+        const touchEndY = e.changedTouches[0].clientY;
+        const deltaY = touchEndY - touchStartY;
+
+        if (deltaY < -50) { // Swipe up
+          const currentSection = document.querySelector('.section.active');
+          const currentIndex = sections.indexOf(currentSection.id);
+          if (currentIndex < sections.length - 1) {
+            if (currentIndex === 0) player.playVideo(); // Start playlist on first swipe
+            currentSection.classList.remove('active');
+            document.getElementById(sections[currentIndex + 1]).classList.add('active');
+          }
+        }
+        isSwiping = false;
+      });
+
+      // Prevent default scrolling
+      document.addEventListener('touchmove', (e) => {
+        if (isSwiping) e.preventDefault();
+      }, { passive: false });
+
+      // Gift unlocks with confetti
+      unlockButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetId = btn.getAttribute('data-unlock');
+          document.getElementById(targetId).style.display = 'block';
+          confetti({
+            particleCount: targetId === 'legacy-gift' ? 150 : 50,
+            spread: targetId === 'legacy-gift' ? 80 : 50,
+            origin: { y: 0.6 },
+            colors: ['#ff69b4', '#ffd700', '#ffffff']
+          });
+        });
+      });
+
+      // Copy codes
+      copyButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const code = btn.getAttribute('data-code');
+          navigator.clipboard.writeText(code);
+          alert('Code copied, $ASHARI fam! Let’s moon!');
+        });
+      });
+    });
+  </script>
 </body>
 </html>
